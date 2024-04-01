@@ -110,7 +110,7 @@ end thunderbird_fsm;
 architecture thunderbird_fsm_arch of thunderbird_fsm is 
 
 -- CONSTANTS ------------------------------------------------------------------
-    signal f_Q : std_logic_vector (7 downto 0) :="10000000"; --prob gotta change the 10
+    signal f_Q : std_logic_vector (7 downto 0) :="10000000"; 
 	signal f_Q_next : std_logic_vector (7 downto 0) :="10000000"; --to default state(all off)
 begin
 

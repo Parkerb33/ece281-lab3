@@ -55,7 +55,6 @@ entity thunderbird_fsm_tb is
 end thunderbird_fsm_tb;
 
 architecture test_bench of thunderbird_fsm_tb is 
-	--UUT
 	component thunderbird_fsm is 
 	  port(
 		 i_clk, i_reset  : in    std_logic;
@@ -65,7 +64,6 @@ architecture test_bench of thunderbird_fsm_tb is
 	  );
 	end component thunderbird_fsm;
 
-	-- test I/O signals  copy/pasted from ICE4
 	--Inputs
     signal w_left : std_logic := '0';
     signal w_right : std_logic := '0';
@@ -73,7 +71,7 @@ architecture test_bench of thunderbird_fsm_tb is
     signal w_clk : std_logic := '0';
     
     --Outputs -prob gonna have to change
-    signal w_lights_L : std_logic_vector(2 downto 0) := "000"; -- one-hot
+    signal w_lights_L : std_logic_vector(2 downto 0) := "000";
     signal w_lights_R : std_logic_vector(2 downto 0) := "000";
     
 	-- constants - clock period
@@ -88,7 +86,7 @@ begin
               i_clk => w_clk,
               i_left => w_left,
               i_right => w_right,
-              o_lights_L => w_lights_L, --wrong
+              o_lights_L => w_lights_L, 
               o_lights_R => w_lights_R
             );
 	-----------------------------------------------------
